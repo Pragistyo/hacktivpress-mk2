@@ -7,6 +7,7 @@ class ArticleClass {
 
     static all ( req, res ) {
         articles.find({})
+        .populate('author')
         .then( result => {
             res.send( result )
         })
@@ -42,7 +43,12 @@ class ArticleClass {
         })
     }
     static create(req, res) {
-        articles.create({})
+        articles.create({
+            title: req.body.title,
+            content: req.body.content,
+            category: req.body.category,
+            author: req.body.id_user
+        })
         .then( result => {
             res.send( result )
         })

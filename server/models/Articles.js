@@ -15,7 +15,7 @@ const ArticleSchema = new Schema(
             type: String,
             required: true
         },
-        author: { type: mongoose.Schema.Types.ObjectId, ref: 'user'}
+        author: { type: Schema.ObjectId, ref: 'User' }
     },
     {timestamp:true}
 )
