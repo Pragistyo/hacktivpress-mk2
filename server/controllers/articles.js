@@ -7,7 +7,7 @@ class ArticleClass {
 
     static all ( req, res ) {
         articles.find({})
-        .populate('author')
+        .populate('author', '_id username')
         .then( result => {
             res.send( result )
         })
