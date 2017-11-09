@@ -15,7 +15,6 @@ This Repository contain live-code-test for creating blog CRUD hacktiv8 (phase2)
 # How to Run
 
 1. Clone this repository
-
 2. Go to *server* directory with terminal:
 
     npm install
