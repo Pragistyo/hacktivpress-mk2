@@ -30,20 +30,20 @@ This Repository contain live-code-test for creating blog CRUD hacktiv8 (phase2)
 
     Login-Register
 
-    | Route | HTTP | Desription|
-    |-------|------|-----------|
-    | `/users/register/` | POST | Register users with username, email, password |
-    | `/users/login/` | POST | Signin users to application |
+| Route | HTTP | Desription|
+|-------|------|-----------|
+| `/users/register/` | POST | Register users with username, email, password |
+| `/users/login/` | POST | Signin users to application |
 
-    CRUD of blog
+CRUD of blog
 
-    | Route | HTTP | Description | Data Need |
-    | ----- | ---- | ----------- | --------- |
-    | `/article` | GET | Get all articles | |
-    | `/article/:id` | GET | Get detail articles | |
-    | `/article` | POST | Create article | |
-    | `/article/:id` | PUT | Update Articles | |
-    | `/article/:id` | DELETE | Delete Articles | |
+| Route | HTTP | Description | Data Need |
+| ----- | ---- | ----------- | --------- |
+| `/article` | GET | Get all articles | |
+| `/article/:id` | GET | Get detail articles | |
+| `/article` | POST | Create article | |
+| `/article/:id` | PUT | Update Articles | |
+| `/article/:id` | DELETE | Delete Articles | |
 
 
 
