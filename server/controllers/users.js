@@ -1,7 +1,7 @@
 const user = require('../models/User')
 const jwt  = require('jsonwebtoken')
 var bcrypt = require('bcrypt')
-var salt   = bcrypt.genSaltSync(saltRounds)
+var salt   = bcrypt.genSaltSync(10)
 require('dotenv').config()
 
 class UserClass {
@@ -17,6 +17,9 @@ class UserClass {
         .catch(err => {
             res.send( err )
         })
+    }
+    static userInfo ( req, res ){
+        res.send(req.locals)
     }
     static register( req, res ) {
         var hash = bcrypt.hashSync(req.body.password, salt)

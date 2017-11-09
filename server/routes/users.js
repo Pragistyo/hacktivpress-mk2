@@ -5,7 +5,8 @@ const router  = express.Router()
 
 router.get('/', userController.all) // get all user
 router.post('/register', userController.register)// register new user
-router.post('/login', jwt.isLogin)// get token
+router.post('/login', userController.login)// get token
+router.get('/verify', jwt.isLogin, userController.userInfo)
 router.delete('/:id', userController.remove)
 
 

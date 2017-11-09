@@ -15,19 +15,63 @@ class ArticleClass {
         })
     }
     static single(req, res) {
-        articles.findOne({})
+        articles.findOne({_id:req.params.article})
+        .then( result =>{
+            res.send( result )
+        })
+        .catch(err => {
+            res.send( err )
+        })
     }
     static author(req, res) {
-        articles.findOne({})
+        articles.findOne({author: req.params.author})
+        .then(result => {
+            res.send(result)
+        })
+        .catch(err => {
+            res.send(err)
+        })
     }
     static category(req, res) {
-        articles.findOne({})
+        articles.findOne({category: req.params.category})
+        .then(result => {
+            res.send(result)
+        })
+        .catch(err => {
+            res.send(err)
+        })
     }
     static create(req, res) {
+        articles.create({})
+        .then( result => {
+            res.send( result )
+        })
+        .catch( err =>{
+            res.send( err )
+        })
     }
     static edit(req, res) {
+        users.findOneAndUpdate(
+            { _id: req.params.article, author: req.locals.id},
+            {
+                $set: {title: req.body.title, content: req.body.content}
+            }
+        )
+        .then( result =>{
+            res.send(result)
+        })
+        .catch(err=>{
+            res.send(err)
+        })
     }
     static remove(req, res) {
+        articles.remove({_id: req.params.article})
+        .then( result => {
+            res.send(result)
+        })
+        .catch(err=>{
+            res.send(err)
+        })
     }
 }
 

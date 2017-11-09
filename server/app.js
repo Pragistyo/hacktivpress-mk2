@@ -17,11 +17,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
 
-// const users = require('./routes/users')
-// const articles = require('./routes/articles')
+const users = require('./routes/users')
+const articles = require('./routes/articles')
 
-// app.use('/users', users)
-// app.use('/articles', articles)
+app.use('/users', users)
+app.use('/articles', articles)
 
 app.listen(3010, () =>{
     console.log('3010 PORT')
