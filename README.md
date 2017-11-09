@@ -4,13 +4,13 @@ This Repository contain live-code-test for creating blog CRUD hacktiv8 (phase2)
 
 # Prerequisite
 
-1. To install *dependencies*, install NPM (node package manager)
+    1. To install *dependencies*, install NPM (node package manager)
 
-    npm : https://www.npmjs.com/get-npm
+        npm : https://www.npmjs.com/get-npm
 
-2. You must have nodejs running in your computer (install npm first).
+    2. You must have nodejs running in your computer (install npm first).
 
-    nodejs: https://nodejs.org/en/download/package-manager/
+        nodejs: https://nodejs.org/en/download/package-manager/
 
 # How to Run
 
